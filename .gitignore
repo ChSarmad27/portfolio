@@ -1,0 +1,26 @@
+# Contact-form submissions. Written by contact.php on every send and holds
+# visitor names, email addresses, IPs and message bodies — never commit it.
+messages.log
+
+# OS / editor
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local environment
+.env
+.env.*
+
+# Runtime output
+*.log
+error_log
+php_errors.log
+
+# PHP tooling (not used today, but keep them out if they appear)
+/vendor/
+composer.lock

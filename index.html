@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Sarmad Qadir — Computer Engineer &amp; Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Muhammad Sarmad Qadir — Computer Engineer (UET Taxila) building front-end and back-end web experiences with HTML, CSS, JavaScript, PHP and SQL.">
+<meta name="author" content="Muhammad Sarmad Qadir">
+<meta name="theme-color" content="#080b12">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Sarmad Qadir — Computer Engineer & Full-Stack Developer">
+<meta property="og:description" content="Front-end & back-end developer. HTML, CSS, JavaScript, PHP, SQL. UET Taxila, Class of 2024.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='69' font-size='46' font-family='Verdana,sans-serif' font-weight='bold' fill='%23081019' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
+
+<script>document.documentElement.classList.add('js');
+(function(){try{var t=localStorage.getItem('sq-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__mark">MSQ</div>
+    <div class="preloader__bar"><span id="preloaderFill"></span></div>
+    <div class="preloader__pct" id="preloaderPct">0%</div>
+  </div>
+</div>
+
+<!-- ══════════ DECOR ══════════ -->
+<canvas class="neural-canvas" id="neuralCanvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo" data-magnetic>
+      <span class="nav__logo-mark">SQ</span>
+      <span class="nav__logo-text">Sarmad<span class="dot">.</span></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about"      class="nav__link">About</a>
+      <a href="#skills"     class="nav__link">Skills</a>
+      <a href="#experience" class="nav__link">Experience</a>
+      <a href="#projects"   class="nav__link">Projects</a>
+      <a href="#education"  class="nav__link">Education</a>
+      <a href="#contact"    class="nav__link">Contact</a>
+      <span class="nav__indicator" id="navIndicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+        <svg class="icon-sun"  viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="#contact" class="btn btn--sm btn--primary nav__cta" data-magnetic>Hire me</a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+  <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-reveal>
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Available for opportunities — Lahore, PK
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line" data-split>Muhammad</span>
+        <span class="line grad" data-split>Sarmad Qadir</span>
+      </h1>
+
+      <p class="hero__role" data-reveal>
+        <span class="hero__role-static">I build</span>
+        <span class="typewriter"><span id="typed"></span><span class="caret" aria-hidden="true"></span></span>
+      </p>
+
+      <p class="hero__bio" data-reveal>
+        Computer Engineer from <strong>UET Taxila</strong> with full-stack experience across
+        front-end and back-end. I turn interfaces into clean, responsive HTML/CSS/JS and back
+        them with solid <strong>PHP</strong> and <strong>SQL</strong> — plus a research streak
+        in EEG-driven machine learning.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#projects" class="btn btn--primary" data-magnetic>
+          View my work
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="assets/Muhammad-Sarmad-Qadir-CV.pdf" download class="btn btn--ghost" data-magnetic>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+          Download CV
+        </a>
+      </div>
+
+      <ul class="hero__socials" data-reveal>
+        <li><a href="mailto:chsarmad888@gmail.com" aria-label="Email Sarmad" data-magnetic>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+        <li><a href="tel:+923326679047" aria-label="Call Sarmad" data-magnetic>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4.5-2 1.5a12 12 0 0 0 5 5l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5Z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/muhammadsarmad-qadir-a33971307" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" data-magnetic>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg></a></li>
+      </ul>
+    </div>
+
+    <!-- EEG / signal card -->
+    <div class="hero__visual" data-reveal>
+      <div class="tilt" data-tilt>
+        <div class="signal-card">
+          <div class="signal-card__glare" aria-hidden="true"></div>
+          <div class="signal-card__head" data-depth="60">
+            <span class="signal-card__title">eeg_stream.live</span>
+            <span class="signal-card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+
+          <svg class="wave" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true" data-depth="40">
+            <defs>
+              <linearGradient id="wg" x1="0" x2="1">
+                <stop offset="0%"   stop-color="var(--brand)"   stop-opacity="0"/>
+                <stop offset="35%"  stop-color="var(--brand)"/>
+                <stop offset="75%"  stop-color="var(--brand-2)"/>
+                <stop offset="100%" stop-color="var(--brand-2)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="wave__path" d="M0,60 Q20,60 30,60 T60,58 Q70,20 78,60 T96,62 Q104,95 112,60 T140,60 Q160,60 180,60 T210,57 Q218,18 226,60 T244,63 Q252,96 260,60 T290,60 Q320,60 340,60 T370,59 Q380,30 388,60 T400,60"
+                  fill="none" stroke="url(#wg)" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+
+          <div class="signal-card__stats" data-depth="70">
+            <div><b>50–60s</b><span>ad clips</span></div>
+            <div><b>1–10</b><span>rating scale</span></div>
+            <div><b>ML</b><span>prediction</span></div>
+          </div>
+
+          <div class="code-chip" data-depth="90" aria-hidden="true">
+            <code><span class="c-key">while</span>(<span class="c-var">signal</span>) { <span class="c-fn">predict</span>(); }</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+    <span class="scroll-hint__mouse" aria-hidden="true"><i></i></span>
+    <span class="scroll-hint__text">Scroll</span>
+  </a>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>HTML5</span><i>◆</i><span>CSS3</span><i>◆</i><span>JavaScript</span><i>◆</i><span>PHP</span><i>◆</i>
+    <span>MySQL</span><i>◆</i><span>Responsive Design</span><i>◆</i><span>PDO</span><i>◆</i>
+    <span>Data Analysis</span><i>◆</i><span>Excel</span><i>◆</i>
+    <span>HTML5</span><i>◆</i><span>CSS3</span><i>◆</i><span>JavaScript</span><i>◆</i><span>PHP</span><i>◆</i>
+    <span>MySQL</span><i>◆</i><span>Responsive Design</span><i>◆</i><span>PDO</span><i>◆</i>
+    <span>Data Analysis</span><i>◆</i><span>Excel</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="section__num">01</span>
+      <h2 class="section__title">About <span class="grad">me</span></h2>
+      <p class="section__sub">Engineer by degree, builder by habit.</p>
+    </header>
+
+    <div class="about">
+      <div class="about__text" data-reveal>
+        <p class="lead">
+          I'm a <strong>Computer Engineer</strong> with a Bachelor's from the University of
+          Engineering &amp; Technology, Taxila — and a genuine appetite for both halves of the stack.
+        </p>
+        <p>
+          My front-end work started with an internship at <strong>Capriventures</strong>, a
+          PITB-funded initiative under NEP-NICS, where I built responsive components, interactive
+          navigation and forms that behaved consistently across browsers and devices. Today I'm a
+          <strong>back-end development intern at Hoboetech Pvt. Ltd</strong>, writing server-side
+          PHP, designing database schemas, and tightening performance and data security.
+        </p>
+        <p>
+          In between, I spent a stretch as <strong>Sales &amp; Accounts Manager at Agrovise</strong> —
+          managing financial records, client databases and reporting. That detour taught me
+          something most developers learn late: how the business actually reads the data we store.
+        </p>
+        <p>
+          Outside of work I build complete applications end to end. <strong>Agrovise</strong> pairs a
+          public product catalogue with a full admin ERP — invoicing, ledgers, purchasing and payroll —
+          and <strong>Lahore Home Food</strong> is an online ordering and delivery platform with live
+          rider tracking and a payment gateway integration, installable as a PWA.
+        </p>
+        <p>
+          My final-year project pushed in a different direction entirely — an
+          <strong>EEG-based machine learning system</strong> that predicts how consumers respond to
+          advertisements from raw brainwave data.
+        </p>
+
+        <ul class="strengths">
+          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Problem-Solving</li>
+          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Adaptability</li>
+          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Communication</li>
+          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Continuous Learning</li>
+        </ul>
+      </div>
+
+      <aside class="about__stats">
+        <div class="stat" data-reveal>
+          <b class="stat__num" data-count="3" data-suffix="">0</b>
+          <span class="stat__label">Professional roles<br>across dev &amp; ops</span>
+        </div>
+        <div class="stat" data-reveal>
+          <b class="stat__num" data-count="2024" data-plain="1">0</b>
+          <span class="stat__label">BS Computer Engineering<br>UET Taxila</span>
+        </div>
+        <div class="stat" data-reveal>
+          <b class="stat__num" data-count="9" data-suffix="+">0</b>
+          <span class="stat__label">Technologies &amp; tools<br>in active use</span>
+        </div>
+        <div class="stat" data-reveal>
+          <b class="stat__num" data-count="2" data-suffix="">0</b>
+          <span class="stat__label">Full-stack applications<br>built end to end</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="section__num">02</span>
+      <h2 class="section__title">Technical <span class="grad">skills</span></h2>
+      <p class="section__sub">What I reach for when I'm building.</p>
+    </header>
+
+    <div class="skills">
+      <article class="skill-card" data-reveal data-tilt>
+        <div class="skill-card__glare" aria-hidden="true"></div>
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8 5 12l4 4M15 8l4 4-4 4"/></svg>
+        </div>
+        <h3>Front-End</h3>
+        <p>Semantic HTML5, modern CSS3 layouts, and vanilla JavaScript for interactive, cross-browser interfaces.</p>
+        <ul class="bars">
+          <li><span class="bars__label">HTML5<em>90%</em></span><span class="bar"><i data-bar="90"></i></span></li>
+          <li><span class="bars__label">CSS3<em>88%</em></span><span class="bar"><i data-bar="88"></i></span></li>
+          <li><span class="bars__label">JavaScript<em>80%</em></span><span class="bar"><i data-bar="80"></i></span></li>
+        </ul>
+      </article>
+
+      <article class="skill-card" data-reveal data-tilt>
+        <div class="skill-card__glare" aria-hidden="true"></div>
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6"/></svg>
+        </div>
+        <h3>Back-End &amp; Data</h3>
+        <p>Server-side PHP, SQL schema design and query optimisation, with a focus on performance and data security.</p>
+        <ul class="bars">
+          <li><span class="bars__label">PHP<em>85%</em></span><span class="bar"><i data-bar="85"></i></span></li>
+          <li><span class="bars__label">SQL / MySQL<em>82%</em></span><span class="bar"><i data-bar="82"></i></span></li>
+          <li><span class="bars__label">Schema design<em>75%</em></span><span class="bar"><i data-bar="75"></i></span></li>
+        </ul>
+      </article>
+
+      <article class="skill-card" data-reveal data-tilt>
+        <div class="skill-card__glare" aria-hidden="true"></div>
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 16V9M12 16v-4M16 16v-7M20 16v-3"/></svg>
+        </div>
+        <h3>Data &amp; Analysis</h3>
+        <p>Advanced Excel and Google Sheets, financial data management, reporting and accounts systems.</p>
+        <ul class="bars">
+          <li><span class="bars__label">Excel (Advanced)<em>92%</em></span><span class="bar"><i data-bar="92"></i></span></li>
+          <li><span class="bars__label">Google Sheets<em>88%</em></span><span class="bar"><i data-bar="88"></i></span></li>
+          <li><span class="bars__label">Financial reporting<em>85%</em></span><span class="bar"><i data-bar="85"></i></span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="chips" data-reveal>
+      <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+      <span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">MySQL</span>
+      <span class="chip">Responsive Design</span><span class="chip">Cross-Browser QA</span>
+      <span class="chip">Microsoft Excel</span><span class="chip">Google Sheets</span>
+      <span class="chip">Accounts Systems</span><span class="chip">PDO / Prepared Statements</span>
+      <span class="chip">Apache</span><span class="chip">Research Methodology</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EXPERIENCE ══════════ -->
+<section class="section" id="experience">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="section__num">03</span>
+      <h2 class="section__title">Work <span class="grad">experience</span></h2>
+      <p class="section__sub">Three roles, two disciplines, one throughline: build it properly.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="tl" data-reveal>
+        <span class="tl__node" aria-hidden="true"></span>
+        <div class="tl__card">
+          <div class="tl__meta">
+            <span class="tl__date tl__date--now"><span class="pulse-dot" aria-hidden="true"></span>2026 — Current</span>
+          </div>
+          <h3 class="tl__role">Back-End Development Intern</h3>
+          <p class="tl__org">Hoboetech Pvt. Ltd</p>
+          <ul class="tl__list">
+            <li>Developing server-side applications using PHP and SQL</li>
+            <li>Designing and implementing database schemas and queries</li>
+            <li>Optimising back-end performance and ensuring data security</li>
+          </ul>
+          <div class="tl__tags"><span>PHP</span><span>SQL</span><span>Schema Design</span><span>Security</span></div>
+        </div>
+      </li>
+
+      <li class="tl" data-reveal>
+        <span class="tl__node" aria-hidden="true"></span>
+        <div class="tl__card">
+          <div class="tl__meta"><span class="tl__date">2025 — 2026</span></div>
+          <h3 class="tl__role">Sales &amp; Accounts Manager</h3>
+          <p class="tl__org">Agrovise</p>
+          <ul class="tl__list">
+            <li>Managed financial records and accounts using Excel and specialised software</li>
+            <li>Processed sales transactions and maintained client account databases</li>
+            <li>Generated financial reports and performed data analysis for business insights</li>
+            <li>Ensured compliance with accounting standards and company policies</li>
+          </ul>
+          <div class="tl__tags"><span>Excel</span><span>Reporting</span><span>Data Analysis</span><span>Compliance</span></div>
+        </div>
+      </li>
+
+      <li class="tl" data-reveal>
+        <span class="tl__node" aria-hidden="true"></span>
+        <div class="tl__card">
+          <div class="tl__meta"><span class="tl__date">Jun 2023 — Aug 2023</span></div>
+          <h3 class="tl__role">Front-End Intern — HTML/CSS</h3>
+          <p class="tl__org">Capriventures <em>· PITB-funded initiative under NEP-NICS</em></p>
+          <ul class="tl__list">
+            <li>Designed and developed responsive website front-end components using HTML, CSS and JavaScript</li>
+            <li>Implemented interactive navigation menus and user-friendly forms</li>
+            <li>Ensured cross-browser compatibility across multiple platforms and devices</li>
+            <li>Optimised layouts for enhanced performance and improved user experience</li>
+          </ul>
+          <div class="tl__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="section section--alt" id="projects">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="section__num">04</span>
+      <h2 class="section__title">Selected <span class="grad">projects</span></h2>
+      <p class="section__sub">Two full applications built end to end — plus my final-year research.</p>
+    </header>
+
+    <div class="works">
+
+      <!-- Agrovise -->
+      <article class="work" data-reveal>
+        <div class="mock mock--erp" aria-hidden="true">
+          <div class="mock__bar">
+            <i></i><i></i><i></i>
+            <span class="mock__url">agrovise / admin / dashboard</span>
+          </div>
+          <div class="mock__body">
+            <div class="mock__side"><b></b><b></b><b></b><b></b><b></b><b></b></div>
+            <div class="mock__main">
+              <div class="mock__tiles"><span></span><span></span><span></span></div>
+              <div class="mock__chart">
+                <span style="--h:38%"></span><span style="--h:66%"></span><span style="--h:48%"></span>
+                <span style="--h:88%"></span><span style="--h:60%"></span><span style="--h:76%"></span>
+                <span style="--h:52%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work__body">
+          <div class="work__head">
+            <span class="work__badge">Personal Project</span>
+            <span class="work__type">Full-Stack · PHP / MySQL</span>
+          </div>
+
+          <h3 class="work__title">Agrovise — Business Site &amp; ERP</h3>
+          <p class="work__desc">
+            Two applications in one plain-PHP codebase for an agriculture products business:
+            a public marketing catalogue, and a full admin ERP behind it. No framework,
+            no build step — Apache, PHP and MySQL doing the work.
+          </p>
+
+          <ul class="work__features">
+            <li>Public catalogue with category pages, product detail overlays and publish gating</li>
+            <li>ERP covering purchasing stock lots, packing, invoicing, sales policies, payments and banking</li>
+            <li>Clients, vendors, employees, ledgers and vehicles, plus an expense-claim approval → payment lifecycle</li>
+            <li>Role-based access control with per-module permissions and an admin-only employee/account layer</li>
+            <li>Security throughout: parameterised PDO queries, CSRF-verified POSTs, content-verified uploads</li>
+            <li>Built-in traffic analytics with per-visitor journey drill-down</li>
+          </ul>
+
+          <div class="work__tags">
+            <span>PHP</span><span>MySQL</span><span>PDO</span><span>HTML5</span>
+            <span>CSS3</span><span>JavaScript</span><span>Apache</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Lahore Home Food -->
+      <article class="work work--rev" data-reveal>
+        <div class="mock mock--order" aria-hidden="true">
+          <div class="mock__bar">
+            <i></i><i></i><i></i>
+            <span class="mock__url">lahore home food / track</span>
+          </div>
+          <div class="mock__body mock__body--stack">
+            <div class="mock__steps">
+              <span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+            </div>
+            <div class="mock__map">
+              <span class="mock__route"></span>
+              <span class="mock__pin"></span>
+            </div>
+            <div class="mock__rows"><span></span><span></span></div>
+          </div>
+        </div>
+
+        <div class="work__body">
+          <div class="work__head">
+            <span class="work__badge">Personal Project</span>
+            <span class="work__type">Full-Stack · PHP 8 / MySQL 8 · PWA</span>
+          </div>
+
+          <h3 class="work__title">Lahore Home Food — Ordering &amp; Delivery</h3>
+          <p class="work__desc">
+            A single-restaurant ordering platform, front to back: menu, basket, checkout,
+            payments, live delivery tracking and a kitchen admin panel — installable as a
+            Progressive Web App from the same codebase, so the app can never fall behind the site.
+          </p>
+
+          <ul class="work__features">
+            <li>Full order flow — browse → basket → checkout → payment → tracking, moving through received, preparing, out for delivery, delivered</li>
+            <li>Four payment paths: cash on delivery, bank transfer, JazzCash and Easypaisa, with real signed gateway payloads</li>
+            <li>Separate rider app with shifts, job claiming and live GPS, shown to the customer on a Leaflet map</li>
+            <li>Admin panel for dishes, categories, prices, sold-out toggles, delivery areas, charges and meal plans</li>
+            <li>Guest checkout plus optional customer accounts with saved addresses and pin-to-area lookup</li>
+            <li>Location data scoped to a single order and deleted on delivery; zero WCAG 2.1 AA violations across 23 pages</li>
+          </ul>
+
+          <div class="work__tags">
+            <span>PHP 8.3</span><span>MySQL 8</span><span>PDO</span><span>JavaScript</span>
+            <span>Leaflet</span><span>PWA</span><span>Service Worker</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="works__divider" data-reveal><span>Final year project</span></h3>
+
+    <article class="project" data-reveal>
+      <div class="project__body">
+        <span class="project__badge">Final Year Group Project</span>
+        <h3 class="project__title">EEG-Based Advertisement Response Prediction System</h3>
+        <p class="project__lead">
+          A machine learning model that predicts consumer response to advertisements using
+          <strong>EEG brainwave data</strong> — turning raw neural signal into a measurable
+          read on whether an ad actually lands.
+        </p>
+
+        <div class="project__grid">
+          <div class="project__block">
+            <h4><span aria-hidden="true">01</span> Objective</h4>
+            <p>Build a predictive model that maps brainwave activity to consumer response, giving market research a signal that doesn't depend on self-reporting.</p>
+          </div>
+          <div class="project__block">
+            <h4><span aria-hidden="true">02</span> Implementation</h4>
+            <p>Collected and processed brainwave data from participants viewing 50–60 second advertisements, then trained models on EEG responses correlated with user ratings on a 1–10 scale.</p>
+          </div>
+          <div class="project__block">
+            <h4><span aria-hidden="true">03</span> Impact</h4>
+            <p>An innovative approach to market research and advertising effectiveness analysis — measuring attention and reaction at the source.</p>
+          </div>
+        </div>
+
+        <div class="project__tags">
+          <span>Data Science</span><span>Signal Processing</span><span>Machine Learning</span>
+          <span>Research Methodology</span><span>EEG</span>
+        </div>
+      </div>
+
+      <div class="project__visual" aria-hidden="true">
+        <div class="brain">
+          <svg viewBox="0 0 200 200">
+            <g class="brain__links" stroke="var(--brand)" stroke-width=".7" fill="none" opacity=".45">
+              <path d="M60 70 L100 50 L140 75 M60 70 L75 115 L120 130 L140 75 M75 115 L100 50 M120 130 L155 110 L140 75 M60 70 L45 110 L75 115 M155 110 L165 65"/>
+            </g>
+            <g class="brain__nodes" fill="var(--brand-2)">
+              <circle cx="100" cy="50" r="4.5"/><circle cx="60" cy="70" r="3.5"/><circle cx="140" cy="75" r="4"/>
+              <circle cx="75" cy="115" r="3.5"/><circle cx="120" cy="130" r="4"/><circle cx="155" cy="110" r="3"/>
+              <circle cx="45" cy="110" r="3"/><circle cx="165" cy="65" r="2.6"/>
+            </g>
+          </svg>
+          <div class="brain__ring"></div>
+          <div class="brain__ring brain__ring--2"></div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ EDUCATION ══════════ -->
+<section class="section" id="education">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="section__num">05</span>
+      <h2 class="section__title">My <span class="grad">education</span></h2>
+      <p class="section__sub">Where the fundamentals came from.</p>
+    </header>
+
+    <div class="edu">
+      <article class="edu-card" data-reveal data-tilt>
+        <div class="edu-card__glare" aria-hidden="true"></div>
+        <span class="edu-card__years">2020 — 2024</span>
+        <h3>Bachelor of Science in Computer Engineering</h3>
+        <p class="edu-card__inst">University of Engineering &amp; Technology (UET), Taxila</p>
+        <p class="edu-card__note">Four years of computer engineering fundamentals — systems, software and signals — capped by an EEG-based machine learning final-year project.</p>
+      </article>
+
+      <article class="edu-card" data-reveal data-tilt>
+        <div class="edu-card__glare" aria-hidden="true"></div>
+        <span class="edu-card__years">2019 — 2020</span>
+        <h3>Intermediate in Pre-Engineering</h3>
+        <p class="edu-card__inst">Punjab Group of Colleges</p>
+        <p class="edu-card__note">Mathematics, physics and chemistry groundwork that led directly into engineering.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="section__num">06</span>
+      <h2 class="section__title">Let's <span class="grad">talk</span></h2>
+      <p class="section__sub">Open to front-end, back-end and full-stack roles.</p>
+    </header>
+
+    <div class="contact">
+      <div class="contact__info">
+        <a class="info-card" href="mailto:chsarmad888@gmail.com" data-reveal data-magnetic>
+          <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span class="info-card__body"><b>Email</b><span>chsarmad888@gmail.com</span></span>
+          <svg class="info-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+
+        <a class="info-card" href="tel:+923326679047" data-reveal data-magnetic>
+          <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4.5-2 1.5a12 12 0 0 0 5 5l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5Z"/></svg></span>
+          <span class="info-card__body"><b>Phone</b><span>+92 332 667 9047</span></span>
+          <svg class="info-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+
+        <a class="info-card" href="https://www.linkedin.com/in/muhammadsarmad-qadir-a33971307" target="_blank" rel="noopener noreferrer" data-reveal data-magnetic>
+          <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg></span>
+          <span class="info-card__body"><b>LinkedIn</b><span>Muhammad Sarmad Qadir</span></span>
+          <svg class="info-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+
+        <div class="info-card info-card--static" data-reveal>
+          <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <span class="info-card__body"><b>Location</b><span>213 MA, P-Block, Johar Town, Lahore</span></span>
+        </div>
+      </div>
+
+      <form class="contact__form" id="contactForm" action="contact.php" method="post" novalidate data-reveal>
+        <div class="field">
+          <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+          <label for="name">Your name</label>
+        </div>
+        <div class="field">
+          <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+          <label for="email">Email address</label>
+        </div>
+        <div class="field">
+          <input type="text" id="subject" name="subject" placeholder=" ">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="field">
+          <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+          <label for="message">Tell me about the role or project</label>
+        </div>
+        <!-- honeypot -->
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" class="btn btn--primary btn--block" id="submitBtn" data-magnetic>
+          <span class="btn__label">Send message</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="nav__logo-mark">SQ</span>
+      <div>
+        <b>Muhammad Sarmad Qadir</b>
+        <span>Computer Engineer · Front-End / Back-End Developer</span>
+      </div>
+    </div>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+      <a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+    <p class="footer__copy">© <span id="year">2026</span> Muhammad Sarmad Qadir. Built from scratch.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
