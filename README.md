@@ -73,11 +73,4 @@ triggers layout.
 - The page is fully readable with JavaScript disabled — reveal elements are
   only hidden once `main.js` confirms it is running.
 
-## Known notes
 
-- **LinkedIn URL** is taken from the CV's text layer:
-  `linkedin.com/in/muhammadsarmad-qadir-a33971307`. The CV's visual layout
-  wraps it mid-word, so if the real handle has a hyphen after "muhammad",
-  update the three links in `index.html`.
-- The Agrovise and Lahore Home Food cards describe the apps but do not link
-  anywhere. Add `href`s once they are deployed somewhere public.
