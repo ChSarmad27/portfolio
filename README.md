@@ -72,5 +72,3 @@ triggers layout.
   cursor and all transitions switch off and content renders in its final state.
 - The page is fully readable with JavaScript disabled — reveal elements are
   only hidden once `main.js` confirms it is running.
-
-
