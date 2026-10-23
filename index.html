@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Muhammad Sarmad Qadir — Computer Engineer &amp; Full-Stack Developer</title>
-<meta name="description" content="Portfolio of Muhammad Sarmad Qadir — Computer Engineer (UET Taxila) and Software Developer at Aceturbo UK, building front-end and back-end web experiences with HTML, CSS, JavaScript, PHP and SQL.">
+<meta name="description" content="Portfolio of Muhammad Sarmad Qadir — Computer Engineer (UET Taxila) and Software Developer at Aceturbo UK, currently rebuilding its turbo-parts store as Turbo 2.0. Front-end and back-end: HTML, CSS, JavaScript, PHP and SQL.">
 <meta name="author" content="Muhammad Sarmad Qadir">
-<meta name="theme-color" content="#080b12">
+<meta name="theme-color" content="#070911">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Muhammad Sarmad Qadir — Computer Engineer & Full-Stack Developer">
-<meta property="og:description" content="Software Developer at Aceturbo UK, working remotely from Lahore. Front-end & back-end. HTML, CSS, JavaScript, PHP, SQL. UET Taxila, Class of 2024.">
+<meta property="og:description" content="Software Developer at Aceturbo UK, working remotely from Lahore. Turbo 2.0 storefront redesign, full-stack PHP / MySQL applications, UET Taxila Class of 2024.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='69' font-size='46' font-family='Verdana,sans-serif' font-weight='bold' fill='%23081019' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='.55' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='69' font-size='46' font-family='Verdana,sans-serif' font-weight='bold' fill='%23060814' text-anchor='middle'%3ESQ%3C/text%3E%3C/svg%3E">
 
 <script>document.documentElement.classList.add('js');
 (function(){try{var t=localStorage.getItem('sq-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
@@ -36,7 +36,7 @@
 <!-- ══════════ DECOR ══════════ -->
 <canvas class="neural-canvas" id="neuralCanvas" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel"></span></div>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
 <a class="skip-link" href="#main">Skip to content</a>
@@ -51,12 +51,12 @@
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Primary">
-      <a href="#about"      class="nav__link">About</a>
-      <a href="#skills"     class="nav__link">Skills</a>
-      <a href="#experience" class="nav__link">Experience</a>
-      <a href="#projects"   class="nav__link">Projects</a>
-      <a href="#education"  class="nav__link">Education</a>
-      <a href="#contact"    class="nav__link">Contact</a>
+      <a href="#about"      class="nav__link" style="--i:0">About</a>
+      <a href="#skills"     class="nav__link" style="--i:1">Skills</a>
+      <a href="#experience" class="nav__link" style="--i:2">Experience</a>
+      <a href="#projects"   class="nav__link" style="--i:3">Projects</a>
+      <a href="#education"  class="nav__link" style="--i:4">Education</a>
+      <a href="#contact"    class="nav__link" style="--i:5">Contact</a>
       <span class="nav__indicator" id="navIndicator" aria-hidden="true"></span>
     </nav>
 
@@ -77,35 +77,41 @@
 
 <!-- ══════════ HERO ══════════ -->
 <section class="hero" id="home">
-  <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
-  <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+  <div class="hero__bg" aria-hidden="true">
+    <span class="aurora aurora--a"></span>
+    <span class="aurora aurora--b"></span>
+    <span class="aurora aurora--c"></span>
+    <span class="hero__lines"></span>
+  </div>
 
-  <div class="container hero__grid">
-    <div class="hero__content">
-      <p class="hero__eyebrow" data-reveal>
+  <div class="container hero__layout">
+    <div class="hero__content" data-hero-content>
+      <p class="hero__eyebrow" data-reveal data-delay="100">
         <span class="pulse-dot" aria-hidden="true"></span>
         Open to opportunities — Lahore, PK
       </p>
 
       <h1 class="hero__title">
-        <span class="line" data-split>Muhammad</span>
-        <span class="line grad" data-split>Sarmad Qadir</span>
+        <span class="sr-only">Muhammad Sarmad Qadir</span>
+        <span class="line" data-split aria-hidden="true">Muhammad</span>
+        <span class="line grad" data-split aria-hidden="true">Sarmad Qadir</span>
       </h1>
 
-      <p class="hero__role" data-reveal>
+      <p class="hero__role" data-reveal data-delay="650">
         <span class="hero__role-static">I build</span>
-        <span class="typewriter"><span id="typed"></span><span class="caret" aria-hidden="true"></span></span>
+        <span class="typewriter" aria-hidden="true"><span id="typed"></span><span class="caret"></span></span>
+        <span class="sr-only">responsive front-ends, PHP and SQL back-ends, and data-driven systems.</span>
       </p>
 
-      <p class="hero__bio" data-reveal>
-        Computer Engineer from <strong>UET Taxila</strong>, now a full-time
-        <strong>Software Developer at Aceturbo UK</strong> — working remotely from Lahore on
-        their websites in core PHP, front-end to database. I turn interfaces into clean,
-        responsive HTML/CSS/JS and back them with solid <strong>PHP</strong> and
-        <strong>SQL</strong> — plus a research streak in EEG-driven machine learning.
+      <p class="hero__bio" data-reveal data-delay="750">
+        Computer Engineer from <strong>UET Taxila</strong> and full-time
+        <strong>Software Developer at Aceturbo UK</strong>, working remotely from Lahore in core
+        PHP — front-end to database. Lately that means <strong>Turbo 2.0</strong>, a ground-up
+        redesign of their turbo-parts store. Clean, responsive interfaces, backed by solid
+        <strong>PHP</strong> and <strong>SQL</strong>.
       </p>
 
-      <div class="hero__cta" data-reveal>
+      <div class="hero__cta" data-reveal data-delay="850">
         <a href="#projects" class="btn btn--primary" data-magnetic>
           View my work
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -116,48 +122,75 @@
         </a>
       </div>
 
-      <ul class="hero__socials" data-reveal>
+      <ul class="hero__socials" data-reveal data-delay="950">
         <li><a href="mailto:chsarmad888@gmail.com" aria-label="Email Sarmad" data-magnetic>
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></a></li>
         <li><a href="tel:+923326679047" aria-label="Call Sarmad" data-magnetic>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4.5-2 1.5a12 12 0 0 0 5 5l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5Z"/></svg></a></li>
-        <li><a href="https://www.linkedin.com/in/muhammad-sarmad-qadir-2987a642a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" data-magnetic>
+        <li><a href="https://www.linkedin.com/in/muhammad-sarmad-qadir-b46659446" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" data-magnetic>
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg></a></li>
+        <li class="hero__now"><span class="pulse-dot pulse-dot--ok" aria-hidden="true"></span>Now shipping <a href="#turbo">Turbo 2.0</a></li>
       </ul>
     </div>
 
-    <!-- EEG / signal card -->
-    <div class="hero__visual" data-reveal>
-      <div class="tilt" data-tilt>
-        <div class="signal-card">
-          <div class="signal-card__glare" aria-hidden="true"></div>
-          <div class="signal-card__head" data-depth="60">
-            <span class="signal-card__title">eeg_stream.live</span>
-            <span class="signal-card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <!-- Code window + floating cards (decorative) -->
+    <div class="hero__visual" data-hero-visual aria-hidden="true">
+      <div class="hero__stage" data-reveal="scale" data-delay="400">
+        <div class="tilt" data-tilt>
+          <div class="code-card">
+            <div class="code-card__glare"></div>
+            <div class="code-card__bar">
+              <span class="code-card__dots"><i></i><i></i><i></i></span>
+              <span class="code-card__tab is-active">finder.php</span>
+              <span class="code-card__tab">turbo2.css</span>
+              <span class="code-card__tab">turbo2.js</span>
+            </div>
+            <div class="code-card__code">
+              <span class="cl" style="--i:0"><span class="t-k">&lt;?php</span></span>
+              <span class="cl" style="--i:1"><span class="t-c">// a reg in, the turbos that fit it out</span></span>
+              <span class="cl" style="--i:2"><span class="t-v">$stmt</span> = <span class="t-v">$link</span>-&gt;<span class="t-f">prepare</span>(</span>
+              <span class="cl" style="--i:3">  <span class="t-s">'SELECT name, price FROM parts</span></span>
+              <span class="cl" style="--i:4">  <span class="t-s"> WHERE oe_number = ?'</span></span>
+              <span class="cl" style="--i:5">);</span>
+              <span class="cl" style="--i:6"><span class="t-v">$stmt</span>-&gt;<span class="t-f">bind_param</span>(<span class="t-s">'s'</span>, <span class="t-v">$oe</span>);</span>
+              <span class="cl" style="--i:7"><span class="t-v">$stmt</span>-&gt;<span class="t-f">execute</span>();</span>
+              <span class="cl" style="--i:8"><span class="t-v">$parts</span> = <span class="t-v">$stmt</span>-&gt;<span class="t-f">get_result</span>();</span>
+            </div>
+            <div class="code-card__status">
+              <span class="code-card__ok">● PHP 8.5</span>
+              <span>mysqli · prepared</span>
+              <span>UTF-8</span>
+            </div>
           </div>
 
-          <svg class="wave" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true" data-depth="40">
-            <defs>
-              <linearGradient id="wg" x1="0" x2="1">
-                <stop offset="0%"   stop-color="var(--brand)"   stop-opacity="0"/>
-                <stop offset="35%"  stop-color="var(--brand)"/>
-                <stop offset="75%"  stop-color="var(--brand-2)"/>
-                <stop offset="100%" stop-color="var(--brand-2)" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <path class="wave__path" d="M0,60 Q20,60 30,60 T60,58 Q70,20 78,60 T96,62 Q104,95 112,60 T140,60 Q160,60 180,60 T210,57 Q218,18 226,60 T244,63 Q252,96 260,60 T290,60 Q320,60 340,60 T370,59 Q380,30 388,60 T400,60"
-                  fill="none" stroke="url(#wg)" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-
-          <div class="signal-card__stats" data-depth="70">
-            <div><b>50–60s</b><span>ad clips</span></div>
-            <div><b>1–10</b><span>rating scale</span></div>
-            <div><b>ML</b><span>prediction</span></div>
+          <div class="float-card float-card--status" style="--z:80px">
+            <div class="float-card__in">
+              <span class="float-card__icon"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>
+              <span class="float-card__text"><b>Turbo 2.0</b><small>74 browser runs · 0 JS errors</small></span>
+            </div>
           </div>
 
-          <div class="code-chip" data-depth="90" aria-hidden="true">
-            <code><span class="c-key">while</span>(<span class="c-var">signal</span>) { <span class="c-fn">predict</span>(); }</code>
+          <div class="float-card float-card--wave" style="--z:55px">
+            <div class="float-card__in">
+              <span class="float-card__title">eeg_stream.live</span>
+              <svg class="wave" viewBox="0 0 400 120" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="wg" x1="0" x2="1">
+                    <stop offset="0%"   stop-color="var(--brand)"   stop-opacity="0"/>
+                    <stop offset="30%"  stop-color="var(--brand)"/>
+                    <stop offset="65%"  stop-color="var(--brand-2)"/>
+                    <stop offset="100%" stop-color="var(--brand-3)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="wave__path" d="M0,60 Q20,60 30,60 T60,58 Q70,20 78,60 T96,62 Q104,95 112,60 T140,60 Q160,60 180,60 T210,57 Q218,18 226,60 T244,63 Q252,96 260,60 T290,60 Q320,60 340,60 T370,59 Q380,30 388,60 T400,60"
+                      fill="none" stroke="url(#wg)" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span class="float-card__meta">EEG → ML · final-year project</span>
+            </div>
           </div>
+
+          <span class="float-chip float-chip--a" style="--z:110px"><span>MySQL 8</span></span>
+          <span class="float-chip float-chip--b" style="--z:95px"><span>Core PHP</span></span>
         </div>
       </div>
     </div>
@@ -171,36 +204,46 @@
 
 <!-- ══════════ MARQUEE ══════════ -->
 <div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>HTML5</span><i>◆</i><span>CSS3</span><i>◆</i><span>JavaScript</span><i>◆</i><span>PHP</span><i>◆</i>
-    <span>MySQL</span><i>◆</i><span>Responsive Design</span><i>◆</i><span>PDO</span><i>◆</i>
-    <span>Data Analysis</span><i>◆</i><span>Excel</span><i>◆</i>
-    <span>HTML5</span><i>◆</i><span>CSS3</span><i>◆</i><span>JavaScript</span><i>◆</i><span>PHP</span><i>◆</i>
-    <span>MySQL</span><i>◆</i><span>Responsive Design</span><i>◆</i><span>PDO</span><i>◆</i>
-    <span>Data Analysis</span><i>◆</i><span>Excel</span><i>◆</i>
+  <div class="marquee__row">
+    <div class="marquee__track" data-dir="left" data-duration="44">
+      <span>HTML5</span><i>◆</i><span>CSS3</span><i>◆</i><span>JavaScript</span><i>◆</i><span>PHP 8</span><i>◆</i>
+      <span>MySQL</span><i>◆</i><span>PDO</span><i>◆</i><span>Responsive Design</span><i>◆</i><span>Accessibility</span><i>◆</i>
+      <span>HTML5</span><i>◆</i><span>CSS3</span><i>◆</i><span>JavaScript</span><i>◆</i><span>PHP 8</span><i>◆</i>
+      <span>MySQL</span><i>◆</i><span>PDO</span><i>◆</i><span>Responsive Design</span><i>◆</i><span>Accessibility</span><i>◆</i>
+    </div>
+  </div>
+  <div class="marquee__row marquee__row--alt">
+    <div class="marquee__track" data-dir="right" data-duration="52">
+      <span>Core PHP</span><i>✦</i><span>E-commerce</span><i>✦</i><span>ERP Systems</span><i>✦</i><span>PWA</span><i>✦</i>
+      <span>UI Motion</span><i>✦</i><span>Data Analysis</span><i>✦</i><span>Excel</span><i>✦</i><span>Browser Testing</span><i>✦</i>
+      <span>Core PHP</span><i>✦</i><span>E-commerce</span><i>✦</i><span>ERP Systems</span><i>✦</i><span>PWA</span><i>✦</i>
+      <span>UI Motion</span><i>✦</i><span>Data Analysis</span><i>✦</i><span>Excel</span><i>✦</i><span>Browser Testing</span><i>✦</i>
+    </div>
   </div>
 </div>
 
 <!-- ══════════ ABOUT ══════════ -->
 <section class="section" id="about">
   <div class="container">
-    <header class="section__head" data-reveal>
+    <header class="section__head" data-reveal="fade">
       <span class="section__num">01</span>
-      <h2 class="section__title">About <span class="grad">me</span></h2>
+      <h2 class="section__title" data-split-words>About <span class="grad">me</span></h2>
       <p class="section__sub">Engineer by degree, builder by habit.</p>
     </header>
 
+    <p class="statement" data-scrub-words>
+      I'm a <strong>Computer Engineer</strong> from UET Taxila with a genuine appetite for
+      both halves of the stack — the interface people see, and the <strong>data</strong>
+      underneath it.
+    </p>
+
     <div class="about">
       <div class="about__text" data-reveal>
-        <p class="lead">
-          I'm a <strong>Computer Engineer</strong> with a Bachelor's from the University of
-          Engineering &amp; Technology, Taxila — and a genuine appetite for both halves of the stack.
-        </p>
         <p>
           Today I'm a full-time <strong>Software Developer at Aceturbo UK</strong>, working
           remotely from Lahore since July 2026. I look after their websites in
           <strong>core PHP</strong> — the front-end people see, the back-end behind it, and the
-          databases underneath both.
+          databases underneath both — and I'm rebuilding their store as <strong>Turbo 2.0</strong>.
         </p>
         <p>
           My front-end work started with an internship at <strong>Capriventures</strong>, a
@@ -228,29 +271,36 @@
         </p>
 
         <ul class="strengths">
-          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Problem-Solving</li>
-          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Adaptability</li>
-          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Communication</li>
-          <li data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Continuous Learning</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Problem-Solving</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Adaptability</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Communication</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>Continuous Learning</li>
         </ul>
       </div>
 
-      <aside class="about__stats">
-        <div class="stat" data-reveal>
-          <b class="stat__num" data-count="4" data-suffix="">0</b>
-          <span class="stat__label">Professional roles<br>across dev &amp; ops</span>
+      <aside class="about__side">
+        <div class="now-card spot" data-reveal>
+          <span class="now-card__label"><span class="pulse-dot pulse-dot--ok" aria-hidden="true"></span>Right now</span>
+          <p>Shipping <b>Turbo 2.0</b> — a new storefront, customer portal and admin panel for Aceturbo UK's turbo-parts store.</p>
+          <a href="#turbo" class="link-arrow">Read the case study <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
-        <div class="stat" data-reveal>
-          <b class="stat__num" data-count="2024" data-plain="1">0</b>
-          <span class="stat__label">BS Computer Engineering<br>UET Taxila</span>
-        </div>
-        <div class="stat" data-reveal>
-          <b class="stat__num" data-count="9" data-suffix="+">0</b>
-          <span class="stat__label">Technologies &amp; tools<br>in active use</span>
-        </div>
-        <div class="stat" data-reveal>
-          <b class="stat__num" data-count="2" data-suffix="">0</b>
-          <span class="stat__label">Full-stack applications<br>built end to end</span>
+        <div class="about__stats">
+          <div class="stat spot" data-reveal>
+            <b class="stat__num" data-count="4">4</b>
+            <span class="stat__label">Professional roles<br>across dev &amp; ops</span>
+          </div>
+          <div class="stat spot" data-reveal>
+            <b class="stat__num" data-count="2024" data-plain>2024</b>
+            <span class="stat__label">BS Computer Engineering<br>UET Taxila</span>
+          </div>
+          <div class="stat spot" data-reveal>
+            <b class="stat__num" data-count="9" data-suffix="+">9+</b>
+            <span class="stat__label">Technologies &amp; tools<br>in active use</span>
+          </div>
+          <div class="stat spot" data-reveal>
+            <b class="stat__num" data-count="2">2</b>
+            <span class="stat__label">Full-stack applications<br>built end to end</span>
+          </div>
         </div>
       </aside>
     </div>
@@ -260,14 +310,14 @@
 <!-- ══════════ SKILLS ══════════ -->
 <section class="section section--alt" id="skills">
   <div class="container">
-    <header class="section__head" data-reveal>
+    <header class="section__head" data-reveal="fade">
       <span class="section__num">02</span>
-      <h2 class="section__title">Technical <span class="grad">skills</span></h2>
+      <h2 class="section__title" data-split-words>Technical <span class="grad">skills</span></h2>
       <p class="section__sub">What I reach for when I'm building.</p>
     </header>
 
     <div class="skills">
-      <article class="skill-card" data-reveal data-tilt>
+      <article class="skill-card spot" data-reveal data-tilt>
         <div class="skill-card__glare" aria-hidden="true"></div>
         <div class="skill-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8 5 12l4 4M15 8l4 4-4 4"/></svg>
@@ -275,13 +325,13 @@
         <h3>Front-End</h3>
         <p>Semantic HTML5, modern CSS3 layouts, and vanilla JavaScript for interactive, cross-browser interfaces.</p>
         <ul class="bars">
-          <li><span class="bars__label">HTML5<em>90%</em></span><span class="bar"><i data-bar="90"></i></span></li>
-          <li><span class="bars__label">CSS3<em>88%</em></span><span class="bar"><i data-bar="88"></i></span></li>
-          <li><span class="bars__label">JavaScript<em>80%</em></span><span class="bar"><i data-bar="80"></i></span></li>
+          <li><span class="bars__label">HTML5<em>90%</em></span><span class="bar"><i data-bar="90" style="--w:.90"></i></span></li>
+          <li><span class="bars__label">CSS3<em>88%</em></span><span class="bar"><i data-bar="88" style="--w:.88"></i></span></li>
+          <li><span class="bars__label">JavaScript<em>80%</em></span><span class="bar"><i data-bar="80" style="--w:.80"></i></span></li>
         </ul>
       </article>
 
-      <article class="skill-card" data-reveal data-tilt>
+      <article class="skill-card spot" data-reveal data-tilt>
         <div class="skill-card__glare" aria-hidden="true"></div>
         <div class="skill-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6"/></svg>
@@ -289,13 +339,13 @@
         <h3>Back-End &amp; Data</h3>
         <p>Server-side PHP, SQL schema design and query optimisation, with a focus on performance and data security.</p>
         <ul class="bars">
-          <li><span class="bars__label">PHP<em>85%</em></span><span class="bar"><i data-bar="85"></i></span></li>
-          <li><span class="bars__label">SQL / MySQL<em>82%</em></span><span class="bar"><i data-bar="82"></i></span></li>
-          <li><span class="bars__label">Schema design<em>75%</em></span><span class="bar"><i data-bar="75"></i></span></li>
+          <li><span class="bars__label">PHP<em>85%</em></span><span class="bar"><i data-bar="85" style="--w:.85"></i></span></li>
+          <li><span class="bars__label">SQL / MySQL<em>82%</em></span><span class="bar"><i data-bar="82" style="--w:.82"></i></span></li>
+          <li><span class="bars__label">Schema design<em>75%</em></span><span class="bar"><i data-bar="75" style="--w:.75"></i></span></li>
         </ul>
       </article>
 
-      <article class="skill-card" data-reveal data-tilt>
+      <article class="skill-card spot" data-reveal data-tilt>
         <div class="skill-card__glare" aria-hidden="true"></div>
         <div class="skill-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 16V9M12 16v-4M16 16v-7M20 16v-3"/></svg>
@@ -303,9 +353,9 @@
         <h3>Data &amp; Analysis</h3>
         <p>Advanced Excel and Google Sheets, financial data management, reporting and accounts systems.</p>
         <ul class="bars">
-          <li><span class="bars__label">Excel (Advanced)<em>92%</em></span><span class="bar"><i data-bar="92"></i></span></li>
-          <li><span class="bars__label">Google Sheets<em>88%</em></span><span class="bar"><i data-bar="88"></i></span></li>
-          <li><span class="bars__label">Financial reporting<em>85%</em></span><span class="bar"><i data-bar="85"></i></span></li>
+          <li><span class="bars__label">Excel (Advanced)<em>92%</em></span><span class="bar"><i data-bar="92" style="--w:.92"></i></span></li>
+          <li><span class="bars__label">Google Sheets<em>88%</em></span><span class="bar"><i data-bar="88" style="--w:.88"></i></span></li>
+          <li><span class="bars__label">Financial reporting<em>85%</em></span><span class="bar"><i data-bar="85" style="--w:.85"></i></span></li>
         </ul>
       </article>
     </div>
@@ -314,6 +364,8 @@
       <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
       <span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">MySQL</span>
       <span class="chip">Responsive Design</span><span class="chip">Cross-Browser QA</span>
+      <span class="chip">UI Motion</span><span class="chip">Accessibility (WCAG)</span>
+      <span class="chip">Automated Browser Testing</span><span class="chip">Payment Gateways</span>
       <span class="chip">Microsoft Excel</span><span class="chip">Google Sheets</span>
       <span class="chip">Accounts Systems</span><span class="chip">PDO / Prepared Statements</span>
       <span class="chip">Apache</span><span class="chip">Research Methodology</span>
@@ -324,110 +376,266 @@
 <!-- ══════════ EXPERIENCE ══════════ -->
 <section class="section" id="experience">
   <div class="container">
-    <header class="section__head" data-reveal>
+    <header class="section__head" data-reveal="fade">
       <span class="section__num">03</span>
-      <h2 class="section__title">Work <span class="grad">experience</span></h2>
+      <h2 class="section__title" data-split-words>Work <span class="grad">experience</span></h2>
       <p class="section__sub">Four roles, two disciplines, one throughline: build it properly.</p>
     </header>
 
-    <ol class="timeline">
-      <li class="tl" data-reveal>
-        <span class="tl__node" aria-hidden="true"></span>
-        <div class="tl__card">
-          <div class="tl__meta">
-            <span class="tl__date tl__date--now"><span class="pulse-dot" aria-hidden="true"></span>Jul 2026 — Current</span>
+    <div class="timeline-wrap" data-timeline>
+      <span class="timeline__progress" aria-hidden="true"></span>
+      <ol class="timeline">
+        <li class="tl" data-reveal>
+          <span class="tl__node" aria-hidden="true"></span>
+          <div class="tl__card spot">
+            <div class="tl__meta">
+              <span class="tl__date tl__date--now"><span class="pulse-dot" aria-hidden="true"></span>Jul 2026 — Current</span>
+            </div>
+            <h3 class="tl__role">Software Developer</h3>
+            <p class="tl__org">Aceturbo UK <em>· Full-time · Remote from Lahore, PK</em></p>
+            <ul class="tl__list">
+              <li>Building and maintaining the company's websites end to end in core PHP — no framework</li>
+              <li>Leading <a href="#turbo">Turbo 2.0</a>: a ground-up redesign of the storefront, customer portal and admin panel</li>
+              <li>Back-end features, server-side logic and integrations behind each site</li>
+              <li>Managing the databases — schema changes, queries and day-to-day data integrity</li>
+            </ul>
+            <div class="tl__tags"><span>Core PHP</span><span>MySQL</span><span>Front-End</span><span>Back-End</span><span>Remote</span></div>
           </div>
-          <h3 class="tl__role">Software Developer</h3>
-          <p class="tl__org">Aceturbo UK <em>· Full-time · Remote from Lahore, PK</em></p>
-          <ul class="tl__list">
-            <li>Building and maintaining the company's websites end to end in core PHP — no framework</li>
-            <li>Front-end work across the live sites: responsive layouts, templates and interface fixes</li>
-            <li>Back-end features, server-side logic and integrations behind each site</li>
-            <li>Managing the databases — schema changes, queries and day-to-day data integrity</li>
-          </ul>
-          <div class="tl__tags"><span>Core PHP</span><span>MySQL</span><span>Front-End</span><span>Back-End</span><span>Remote</span></div>
-        </div>
-      </li>
+        </li>
 
-      <li class="tl" data-reveal>
-        <span class="tl__node" aria-hidden="true"></span>
-        <div class="tl__card">
-          <div class="tl__meta">
-            <span class="tl__date">2026 — Jun 2026</span>
+        <li class="tl" data-reveal>
+          <span class="tl__node" aria-hidden="true"></span>
+          <div class="tl__card spot">
+            <div class="tl__meta">
+              <span class="tl__date">2026 — Jun 2026</span>
+            </div>
+            <h3 class="tl__role">Back-End Development Intern</h3>
+            <p class="tl__org">Hoboetech Pvt. Ltd</p>
+            <ul class="tl__list">
+              <li>Developed server-side applications using PHP and SQL</li>
+              <li>Designed and implemented database schemas and queries</li>
+              <li>Optimised back-end performance and ensured data security</li>
+            </ul>
+            <div class="tl__tags"><span>PHP</span><span>SQL</span><span>Schema Design</span><span>Security</span></div>
           </div>
-          <h3 class="tl__role">Back-End Development Intern</h3>
-          <p class="tl__org">Hoboetech Pvt. Ltd</p>
-          <ul class="tl__list">
-            <li>Developed server-side applications using PHP and SQL</li>
-            <li>Designed and implemented database schemas and queries</li>
-            <li>Optimised back-end performance and ensured data security</li>
-          </ul>
-          <div class="tl__tags"><span>PHP</span><span>SQL</span><span>Schema Design</span><span>Security</span></div>
-        </div>
-      </li>
+        </li>
 
-      <li class="tl" data-reveal>
-        <span class="tl__node" aria-hidden="true"></span>
-        <div class="tl__card">
-          <div class="tl__meta"><span class="tl__date">2025 — 2026</span></div>
-          <h3 class="tl__role">Sales &amp; Accounts Manager</h3>
-          <p class="tl__org">Agrovise</p>
-          <ul class="tl__list">
-            <li>Managed financial records and accounts using Excel and specialised software</li>
-            <li>Processed sales transactions and maintained client account databases</li>
-            <li>Generated financial reports and performed data analysis for business insights</li>
-            <li>Ensured compliance with accounting standards and company policies</li>
-          </ul>
-          <div class="tl__tags"><span>Excel</span><span>Reporting</span><span>Data Analysis</span><span>Compliance</span></div>
-        </div>
-      </li>
+        <li class="tl" data-reveal>
+          <span class="tl__node" aria-hidden="true"></span>
+          <div class="tl__card spot">
+            <div class="tl__meta"><span class="tl__date">2025 — 2026</span></div>
+            <h3 class="tl__role">Sales &amp; Accounts Manager</h3>
+            <p class="tl__org">Agrovise</p>
+            <ul class="tl__list">
+              <li>Managed financial records and accounts using Excel and specialised software</li>
+              <li>Processed sales transactions and maintained client account databases</li>
+              <li>Generated financial reports and performed data analysis for business insights</li>
+              <li>Ensured compliance with accounting standards and company policies</li>
+            </ul>
+            <div class="tl__tags"><span>Excel</span><span>Reporting</span><span>Data Analysis</span><span>Compliance</span></div>
+          </div>
+        </li>
 
-      <li class="tl" data-reveal>
-        <span class="tl__node" aria-hidden="true"></span>
-        <div class="tl__card">
-          <div class="tl__meta"><span class="tl__date">Jun 2023 — Aug 2023</span></div>
-          <h3 class="tl__role">Front-End Intern — HTML/CSS</h3>
-          <p class="tl__org">Capriventures <em>· PITB-funded initiative under NEP-NICS</em></p>
-          <ul class="tl__list">
-            <li>Designed and developed responsive website front-end components using HTML, CSS and JavaScript</li>
-            <li>Implemented interactive navigation menus and user-friendly forms</li>
-            <li>Ensured cross-browser compatibility across multiple platforms and devices</li>
-            <li>Optimised layouts for enhanced performance and improved user experience</li>
-          </ul>
-          <div class="tl__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
-        </div>
-      </li>
-    </ol>
+        <li class="tl" data-reveal>
+          <span class="tl__node" aria-hidden="true"></span>
+          <div class="tl__card spot">
+            <div class="tl__meta"><span class="tl__date">Jun 2023 — Aug 2023</span></div>
+            <h3 class="tl__role">Front-End Intern — HTML/CSS</h3>
+            <p class="tl__org">Capriventures <em>· PITB-funded initiative under NEP-NICS</em></p>
+            <ul class="tl__list">
+              <li>Designed and developed responsive website front-end components using HTML, CSS and JavaScript</li>
+              <li>Implemented interactive navigation menus and user-friendly forms</li>
+              <li>Ensured cross-browser compatibility across multiple platforms and devices</li>
+              <li>Optimised layouts for enhanced performance and improved user experience</li>
+            </ul>
+            <div class="tl__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+          </div>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
 
 <!-- ══════════ PROJECTS ══════════ -->
 <section class="section section--alt" id="projects">
   <div class="container">
-    <header class="section__head" data-reveal>
+    <header class="section__head" data-reveal="fade">
       <span class="section__num">04</span>
-      <h2 class="section__title">Selected <span class="grad">projects</span></h2>
-      <p class="section__sub">Two full applications built end to end — plus my final-year research.</p>
+      <h2 class="section__title" data-split-words>Selected <span class="grad">projects</span></h2>
+      <p class="section__sub">A storefront redesign at work, two full applications built end to end — plus my final-year research.</p>
     </header>
+
+    <!-- Featured: Aceturbo Turbo 2.0 -->
+    <article class="case" id="turbo" aria-labelledby="turboTitle">
+      <div class="case__head">
+        <div class="case__intro" data-reveal>
+          <div class="work__head">
+            <span class="work__badge">Featured · Work project</span>
+            <span class="work__type">Aceturbo UK · Front-end redesign · 2026</span>
+          </div>
+          <h3 class="case__title" id="turboTitle">Aceturbo <em>Turbo 2.0</em></h3>
+          <p class="case__lead">
+            A ground-up front-end redesign of <strong>aceturbo.co.uk</strong>, a UK store for
+            turbochargers, CHRA cartridges and parts. The storefront, customer portal and admin
+            panel were all rebuilt on the existing PHP codebase, as a staging copy beside the live
+            site, without breaking a single legacy script.
+          </p>
+        </div>
+
+        <ul class="case__metrics">
+          <li class="spot" data-reveal><b data-count="19500" data-suffix="+">19,500+</b><span>vehicles searchable in the parts finder</span></li>
+          <li class="spot" data-reveal><b data-count="72">72</b><span>admin pages brought onto the new theme</span></li>
+          <li class="spot" data-reveal><b data-count="79">79</b><span>screens audited for accessibility</span></li>
+          <li class="spot" data-reveal><b data-count="29" data-suffix="/29">29/29</b><span>functional tests passing</span></li>
+        </ul>
+      </div>
+
+      <div class="gallery gallery--case" data-gallery data-reveal="fade">
+        <div class="gallery__stage">
+          <div class="device device--desktop">
+            <div class="device__bar">
+              <span class="device__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="device__url">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                aceturbo.co.uk — Turbo 2.0
+              </span>
+            </div>
+            <div class="device__screen" data-cursor="Next">
+              <figure class="device__slide is-active" id="turboSlide1" role="tabpanel" aria-labelledby="turboTab1" aria-describedby="turboCap1">
+                <img src="assets/img/turbo/home-1440.webp"
+                     srcset="assets/img/turbo/home-800.webp 800w, assets/img/turbo/home-1440.webp 1440w"
+                     sizes="(max-width: 980px) 90vw, 900px" width="1440" height="900" decoding="async"
+                     alt="Turbo 2.0 home page: a navy hero with the headline “Nozzle rings matched to your reg.”, a vertical slide show of turbo parts on the left and the Find your turbo search card on the right.">
+              </figure>
+              <figure class="device__slide" id="turboSlide2" role="tabpanel" aria-labelledby="turboTab2" aria-describedby="turboCap2" aria-hidden="true">
+                <img src="assets/img/turbo/hud-1440.webp"
+                     srcset="assets/img/turbo/hud-800.webp 800w, assets/img/turbo/hud-1440.webp 1440w"
+                     sizes="(max-width: 980px) 90vw, 900px" width="1440" height="900" loading="lazy" decoding="async"
+                     alt="Hovering a turbo part opens a heads-up display: the compressor cover in a targeting frame, with a glass panel naming the part and describing what it does.">
+              </figure>
+              <figure class="device__slide" id="turboSlide3" role="tabpanel" aria-labelledby="turboTab3" aria-describedby="turboCap3" aria-hidden="true">
+                <img src="assets/img/turbo/part-1440.webp"
+                     srcset="assets/img/turbo/part-800.webp 800w, assets/img/turbo/part-1440.webp 1440w"
+                     sizes="(max-width: 980px) 90vw, 900px" width="1440" height="900" loading="lazy" decoding="async"
+                     alt="Part details pop-up with a photo gallery, the matching OE numbers, the price and the supplier part number.">
+              </figure>
+              <figure class="device__slide" id="turboSlide4" role="tabpanel" aria-labelledby="turboTab4" aria-describedby="turboCap4" aria-hidden="true">
+                <img src="assets/img/turbo/admin-1440.webp"
+                     srcset="assets/img/turbo/admin-800.webp 800w, assets/img/turbo/admin-1440.webp 1440w"
+                     sizes="(max-width: 980px) 90vw, 900px" width="1440" height="900" loading="lazy" decoding="async"
+                     alt="Admin sign-in: a “Turbo control room” brand panel with a compressor wheel, beside a sign-in form showing an inline error message.">
+              </figure>
+            </div>
+          </div>
+
+          <div class="device device--phone">
+            <span class="device__notch" aria-hidden="true"></span>
+            <img src="assets/img/turbo/mobile-390.webp" width="390" height="844" loading="lazy" decoding="async"
+                 alt="The Turbo 2.0 home page on a phone, with a part's heads-up display panel open.">
+          </div>
+        </div>
+
+        <div class="gallery__foot">
+          <div class="gallery__caps">
+            <p class="gallery__cap is-active" id="turboCap1"><b>Home &amp; finder.</b> A rotating headline over a vertical slide show of cut-out parts, beside the reg, turbo-number and vehicle finder. The counters underneath read live catalogue figures.</p>
+            <p class="gallery__cap" id="turboCap2"><b>Part scanner.</b> Hover a part and the slide show stops. A HUD panel wires itself to the part, decodes its name letter by letter and types out what it does.</p>
+            <p class="gallery__cap" id="turboCap3"><b>Part details.</b> The part pop-up, rebuilt with every value escaped, a working thumbnail gallery and prices to the penny.</p>
+            <p class="gallery__cap" id="turboCap4"><b>Admin sign-in.</b> The split-screen sign-in for the admin panel. Errors now appear inline, where the old page raised an alert box.</p>
+          </div>
+          <div class="gallery__controls">
+            <div class="gallery__tabs" role="tablist" aria-label="Turbo 2.0 screens">
+              <button class="gallery__tab is-active" type="button" role="tab" id="turboTab1" aria-controls="turboSlide1" aria-selected="true"><span class="gallery__tab-num">01</span>Home &amp; finder<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+              <button class="gallery__tab" type="button" role="tab" id="turboTab2" aria-controls="turboSlide2" aria-selected="false" tabindex="-1"><span class="gallery__tab-num">02</span>Part scanner<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+              <button class="gallery__tab" type="button" role="tab" id="turboTab3" aria-controls="turboSlide3" aria-selected="false" tabindex="-1"><span class="gallery__tab-num">03</span>Part details<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+              <button class="gallery__tab" type="button" role="tab" id="turboTab4" aria-controls="turboSlide4" aria-selected="false" tabindex="-1"><span class="gallery__tab-num">04</span>Admin sign-in<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+            </div>
+            <button class="gallery__play" type="button" aria-label="Pause slide show" aria-pressed="false">
+              <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>
+              <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case__grid">
+        <div class="case__col" data-reveal>
+          <h4>Storefront &amp; motion</h4>
+          <ul class="work__features">
+            <li>Find a turbo by registration, turbo number or vehicle, through a five-step make → model → year → engine → power cascade</li>
+            <li>Nine cut-out turbo parts slide past the hero in assembly order. Hover one and a HUD panel scans it, decoding its name and typing out what it does</li>
+            <li>A line-art inline-four engine with a true slider-crank, firing 1-3-4-2, that revs as you scroll or type a reg</li>
+            <li>Shop, basket and checkout rebuilt with a vehicle hero carrying the reg plate, parts as cards on phones and a sticky order summary</li>
+            <li>One design system for every page: shared PHP partials, design tokens, self-hosted fonts and 30-plus interaction modules. Each one has a reduced-motion path and a no-JS fallback</li>
+          </ul>
+        </div>
+        <div class="case__col" data-reveal>
+          <h4>Portal, admin &amp; quality</h4>
+          <ul class="work__features">
+            <li>A 13-page customer portal: split-screen sign-in, an order progress tracker, and case threads with drag-and-drop uploads</li>
+            <li>The AdminLTE 3 admin panel rethemed across 72 pages, with a live-figures dashboard and quick-link tiles</li>
+            <li>Safe for the legacy code: every id, field name and handler the old scripts rely on was kept, and edits were made with count-checked replacements</li>
+            <li>A PHP GD pipeline that cuts studio photos of parts out of their backgrounds as transparent WebP</li>
+            <li>Tested without touching live data, using a functional suite on shadow tables with a mail stub, a zero-dependency headless-Chrome harness and a link crawl</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="work__tags" data-reveal>
+        <span>PHP 8</span><span>MySQL 8</span><span>JavaScript</span><span>CSS3</span>
+        <span>AdminLTE 3</span><span>PayPal</span><span>WebP</span><span>Headless Chrome</span>
+      </div>
+    </article>
 
     <div class="works">
 
       <!-- Agrovise -->
-      <article class="work" data-reveal>
-        <div class="mock mock--erp" aria-hidden="true">
-          <div class="mock__bar">
-            <i></i><i></i><i></i>
-            <span class="mock__url">agrovise / admin / dashboard</span>
-          </div>
-          <div class="mock__body">
-            <div class="mock__side"><b></b><b></b><b></b><b></b><b></b><b></b></div>
-            <div class="mock__main">
-              <div class="mock__tiles"><span></span><span></span><span></span></div>
-              <div class="mock__chart">
-                <span style="--h:38%"></span><span style="--h:66%"></span><span style="--h:48%"></span>
-                <span style="--h:88%"></span><span style="--h:60%"></span><span style="--h:76%"></span>
-                <span style="--h:52%"></span>
+      <article class="work work--agro spot" data-reveal>
+        <div class="gallery" data-gallery>
+          <div class="gallery__stage">
+            <div class="device device--desktop">
+              <div class="device__bar">
+                <span class="device__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="device__url">agrovise — public site</span>
               </div>
+              <div class="device__screen" data-cursor="Next">
+                <figure class="device__slide is-active" id="agroSlide1" role="tabpanel" aria-labelledby="agroTab1" aria-describedby="agroCap1">
+                  <img src="assets/img/agrovise/home-800.webp"
+                       srcset="assets/img/agrovise/home-800.webp 800w, assets/img/agrovise/home-1440.webp 1440w"
+                       sizes="(max-width: 980px) 90vw, 560px" width="1440" height="900" loading="lazy" decoding="async"
+                       alt="Agrovise home page: the headline “Plow. Grow. Glow.” in a large serif over a sunlit field, with Explore the collection and Our story links.">
+                </figure>
+                <figure class="device__slide" id="agroSlide2" role="tabpanel" aria-labelledby="agroTab2" aria-describedby="agroCap2" aria-hidden="true">
+                  <img src="assets/img/agrovise/collection-800.webp"
+                       srcset="assets/img/agrovise/collection-800.webp 800w, assets/img/agrovise/collection-1440.webp 1440w"
+                       sizes="(max-width: 980px) 90vw, 560px" width="1440" height="900" loading="lazy" decoding="async"
+                       alt="The collection section, “Five families, one harvest.”, opening with the Insecticides family beside a product photograph.">
+                </figure>
+                <figure class="device__slide" id="agroSlide3" role="tabpanel" aria-labelledby="agroTab3" aria-describedby="agroCap3" aria-hidden="true">
+                  <img src="assets/img/agrovise/story-800.webp"
+                       srcset="assets/img/agrovise/story-800.webp 800w, assets/img/agrovise/story-1440.webp 1440w"
+                       sizes="(max-width: 980px) 90vw, 560px" width="1440" height="900" loading="lazy" decoding="async"
+                       alt="The Our story section on a deep green band: a field photograph beside the heading “A house built on good ground.” and a pull quote.">
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__foot">
+            <div class="gallery__caps">
+              <p class="gallery__cap is-active" id="agroCap1"><b>Home.</b> A full-bleed field photograph under a Cormorant Garamond headline, opening an editorial “chapter” structure that runs down the page.</p>
+              <p class="gallery__cap" id="agroCap2"><b>The collection.</b> Five product families, each with its own chapter and photography. A family with nothing published yet says “New selections arriving” instead of showing an empty grid.</p>
+              <p class="gallery__cap" id="agroCap3"><b>Our story.</b> The brand story on a deep-green band. A static copy of these public pages is built from the same codebase for GitHub Pages.</p>
+            </div>
+            <div class="gallery__controls">
+              <div class="gallery__tabs" role="tablist" aria-label="Agrovise screens">
+                <button class="gallery__tab is-active" type="button" role="tab" id="agroTab1" aria-controls="agroSlide1" aria-selected="true"><span class="gallery__tab-num">01</span>Home<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+                <button class="gallery__tab" type="button" role="tab" id="agroTab2" aria-controls="agroSlide2" aria-selected="false" tabindex="-1"><span class="gallery__tab-num">02</span>Collection<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+                <button class="gallery__tab" type="button" role="tab" id="agroTab3" aria-controls="agroSlide3" aria-selected="false" tabindex="-1"><span class="gallery__tab-num">03</span>Our story<span class="gallery__tab-fill" aria-hidden="true"></span></button>
+              </div>
+              <button class="gallery__play" type="button" aria-label="Pause slide show" aria-pressed="false">
+                <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>
+                <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5Z"/></svg>
+              </button>
             </div>
           </div>
         </div>
@@ -462,7 +670,7 @@
       </article>
 
       <!-- Lahore Home Food -->
-      <article class="work work--rev" data-reveal>
+      <article class="work work--food work--rev spot" data-reveal>
         <div class="mock mock--order" aria-hidden="true">
           <div class="mock__bar">
             <i></i><i></i><i></i>
@@ -510,9 +718,9 @@
       </article>
     </div>
 
-    <h3 class="works__divider" data-reveal><span>Final year project</span></h3>
+    <h3 class="works__divider" data-reveal="fade"><span>Final year project</span></h3>
 
-    <article class="project" data-reveal>
+    <article class="project spot" data-reveal>
       <div class="project__body">
         <span class="project__badge">Final Year Group Project</span>
         <h3 class="project__title">EEG-Based Advertisement Response Prediction System</h3>
@@ -543,8 +751,9 @@
         </div>
       </div>
 
-      <div class="project__visual" aria-hidden="true">
+      <div class="project__visual" aria-hidden="true" data-speed="0.4">
         <div class="brain">
+          <div class="brain__net">
           <svg viewBox="0 0 200 200">
             <g class="brain__links" stroke="var(--brand)" stroke-width=".7" fill="none" opacity=".45">
               <path d="M60 70 L100 50 L140 75 M60 70 L75 115 L120 130 L140 75 M75 115 L100 50 M120 130 L155 110 L140 75 M60 70 L45 110 L75 115 M155 110 L165 65"/>
@@ -555,6 +764,7 @@
               <circle cx="45" cy="110" r="3"/><circle cx="165" cy="65" r="2.6"/>
             </g>
           </svg>
+          </div>
           <div class="brain__ring"></div>
           <div class="brain__ring brain__ring--2"></div>
         </div>
@@ -566,14 +776,14 @@
 <!-- ══════════ EDUCATION ══════════ -->
 <section class="section" id="education">
   <div class="container">
-    <header class="section__head" data-reveal>
+    <header class="section__head" data-reveal="fade">
       <span class="section__num">05</span>
-      <h2 class="section__title">My <span class="grad">education</span></h2>
+      <h2 class="section__title" data-split-words>My <span class="grad">education</span></h2>
       <p class="section__sub">Where the fundamentals came from.</p>
     </header>
 
     <div class="edu">
-      <article class="edu-card" data-reveal data-tilt>
+      <article class="edu-card spot" data-reveal data-tilt>
         <div class="edu-card__glare" aria-hidden="true"></div>
         <span class="edu-card__years">2020 — 2024</span>
         <h3>Bachelor of Science in Computer Engineering</h3>
@@ -581,7 +791,7 @@
         <p class="edu-card__note">Four years of computer engineering fundamentals — systems, software and signals — capped by an EEG-based machine learning final-year project.</p>
       </article>
 
-      <article class="edu-card" data-reveal data-tilt>
+      <article class="edu-card spot" data-reveal data-tilt>
         <div class="edu-card__glare" aria-hidden="true"></div>
         <span class="edu-card__years">2019 — 2020</span>
         <h3>Intermediate in Pre-Engineering</h3>
@@ -593,29 +803,30 @@
 </section>
 
 <!-- ══════════ CONTACT ══════════ -->
-<section class="section section--alt" id="contact">
+<section class="section section--alt section--contact" id="contact">
+  <div class="contact__glow" aria-hidden="true"></div>
   <div class="container">
-    <header class="section__head" data-reveal>
+    <header class="section__head" data-reveal="fade">
       <span class="section__num">06</span>
-      <h2 class="section__title">Let's <span class="grad">talk</span></h2>
+      <h2 class="section__title" data-split-words>Let's <span class="grad">talk</span></h2>
       <p class="section__sub">Open to front-end, back-end and full-stack roles.</p>
     </header>
 
     <div class="contact">
       <div class="contact__info">
-        <a class="info-card" href="mailto:chsarmad888@gmail.com" data-reveal data-magnetic>
+        <a class="info-card spot" href="mailto:chsarmad888@gmail.com" data-reveal data-magnetic>
           <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span>
           <span class="info-card__body"><b>Email</b><span>chsarmad888@gmail.com</span></span>
           <svg class="info-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         </a>
 
-        <a class="info-card" href="tel:+923326679047" data-reveal data-magnetic>
+        <a class="info-card spot" href="tel:+923326679047" data-reveal data-magnetic>
           <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h3l1.5 4.5-2 1.5a12 12 0 0 0 5 5l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5.5 5.7 2 2 0 0 1 7 3.5Z"/></svg></span>
           <span class="info-card__body"><b>Phone</b><span>+92 332 667 9047</span></span>
           <svg class="info-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
         </a>
 
-        <a class="info-card" href="https://www.linkedin.com/in/muhammad-sarmad-qadir-2987a642a" target="_blank" rel="noopener noreferrer" data-reveal data-magnetic>
+        <a class="info-card spot" href="https://www.linkedin.com/in/muhammad-sarmad-qadir-b46659446" target="_blank" rel="noopener noreferrer" data-reveal data-magnetic>
           <span class="info-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg></span>
           <span class="info-card__body"><b>LinkedIn</b><span>Muhammad Sarmad Qadir</span></span>
           <svg class="info-card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -627,7 +838,7 @@
         </div>
       </div>
 
-      <form class="contact__form" id="contactForm" action="contact.php" method="post" novalidate data-reveal>
+      <form class="contact__form spot" id="contactForm" action="contact.php" method="post" novalidate data-reveal>
         <div class="field">
           <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
           <label for="name">Your name</label>
@@ -673,7 +884,7 @@
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
       <a href="#projects">Projects</a><a href="#contact">Contact</a>
     </nav>
-    <p class="footer__copy">© <span id="year">2026</span> Muhammad Sarmad Qadir. Built from scratch.</p>
+    <p class="footer__copy">© <span id="year">2026</span> Muhammad Sarmad Qadir. Built from scratch, animated with GSAP.</p>
   </div>
 </footer>
 
@@ -681,6 +892,8 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
 </button>
 
+<script src="assets/vendor/gsap/gsap.min.js"></script>
+<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
